@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শুভ বিবাহ | হোসেন শাহরিয়ার (সোহাগ) ও উম্মে আয়মান নুসরাত</title>
+    <style>
+        /* =====================================================================
+           ROYAL MAROON & CREAM THEME - ZERO EXTERNAL CDN DEPENDENCIES
+           ===================================================================== */
+        :root {
+            --maroon-deep: #4A0E1C;
+            --maroon-rich: #5E1224;
+            --maroon-soft: #7A1B32;
+            --cream-bg: #FDF8F2;
+            --cream-card: #F7EFE5;
+            --cream-white: #FFFDF9;
+            --gold-main: #D4AF37;
+            --gold-light: #F3E5AB;
+            --gold-dark: #9E7B1C;
+            --text-dark: #2B181C;
+            --text-muted: #5C4348;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Serif Bengali', 'Hind Siliguri', 'SolaimanLipi', 'Kalpurush', Georgia, serif;
+            background-color: var(--cream-bg);
+            color: var(--text-dark);
+            line-height: 1.65;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Gold Shimmer Text */
+        .gold-shimmer {
+            background: linear-gradient(135deg, #B88A1E 0%, #F5E199 35%, #D4AF37 65%, #FFF2BE 85%, #B88A1E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: goldShine 4.5s linear infinite;
+        }
+
+        @keyframes goldShine {
+            to { background-position: 200% center; }
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        @keyframes pulseGold {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.55); }
+            50% { box-shadow: 0 0 24px 8px rgba(212, 175, 55, 0.22); }
+        }
+
+        @keyframes spinMandala {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* =====================================================================
+           1. COVER SCREEN (WELCOME GATE - ROYAL MAROON)
+           ===================================================================== */
+        #welcome-screen {
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: radial-gradient(circle at top, #681529 0%, #4A0E1C 55%, #320812 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 16px;
+            overflow-y: auto;
+            transition: opacity 0.65s ease, transform 0.7s ease, visibility 0.65s ease;
+        }
+
+        #welcome-screen.opened {
+            opacity: 0;
+            transform: scale(1.04);
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        /* Decorative Corner Borders on Cover */
+        .cover-corner {
+            position: fixed;
+            width: 48px;
+            height: 48px;
+            border-color: rgba(212, 175, 55, 0.55);
+            border-style: solid;
+            pointer-events: none;
+        }
+        .c-tl { top: 14px; left: 14px; border-width: 2px 0 0 2px; border-top-left-radius: 14px; }
+        .c-tr { top: 14px; right: 14px; border-width: 2px 2px 0 0; border-top-right-radius: 14px; }
+        .c-bl { bottom: 14px; left: 14px; border-width: 0 0 2px 2px; border-bottom-left-radius: 14px; }
+        .c-br { bottom: 14px; right: 14px; border-width: 0 2px 2px 0; border-bottom-right-radius: 14px; }
+
+        .cover-mandala {
+            position: fixed;
+            width: 340px;
+            height: 340px;
+            opacity: 0.12;
+            color: var(--gold-main);
+            animation: spinMandala 50s linear infinite;
+            pointer-events: none;
+        }
+
+        .welcome-box {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 430px;
+            background: rgba(54, 9, 20, 0.85);
+            border: 1.5px solid rgba(212, 175, 55, 0.5);
+            border-radius: 26px;
+            padding: 28px 20px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 0 0 4px rgba(212, 175, 55, 0.12);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .cover-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 15px;
+            border-radius: 999px;
+            background: rgba(212, 175, 55, 0.14);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            color: var(--gold-light);
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        .cover-title {
+            font-size: 34px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin: 2px 0;
+        }
+
+        .cover-subnames {
+            font-size: 14px;
+            color: var(--gold-light);
+            opacity: 0.95;
+        }
+
+        .monogram-circle {
+            width: 84px;
+            height: 84px;
+            border-radius: 50%;
+            border: 1.5px solid var(--gold-main);
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.22), rgba(74, 14, 28, 0.9));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: floatSlow 3.8s ease-in-out infinite;
+            margin: 4px 0;
+        }
+
+        .cover-tagline {
+            font-size: 14.5px;
+            color: #FAF2E6;
+            line-height: 1.65;
+            padding: 0 4px;
+        }
+
+        .cover-date-pill {
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 999px;
+            background: rgba(253, 248, 242, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            color: var(--gold-light);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .welcome-btn {
+            margin-top: 6px;
+            width: 100%;
+            max-width: 280px;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #B88924 0%, #F6E299 50%, #C5962C 100%);
+            color: #360812;
+            font-family: inherit;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            animation: pulseGold 2.4s infinite;
+            transition: transform 0.2s ease, filter 0.2s ease;
+        }
+
+        .welcome-btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.06);
+        }
+
+        .welcome-btn:active {
+            transform: scale(0.97);
+        }
+
+        .cover-hint {
+            font-size: 12px;
+            color: rgba(243, 229, 171, 0.72);
+        }
+
+        /* =====================================================================
+           FLOATING MUSIC TOGGLE BUTTON (TOP-RIGHT) & TOAST
+           ===================================================================== */
+        #music-control-wrap {
+            position: fixed;
+            top: 14px;
+            right: 14px;
+            z-index: 800;
+            display: none;
+        }
+
+        .music-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            border-radius: 999px;
+            background: rgba(74, 14, 28, 0.94);
+            color: var(--gold-light);
+            border: 1.5px solid var(--gold-main);
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(43, 24, 28, 0.25);
+        }
+
+        .wave-bars {
+            display: inline-flex;
+            align-items: flex-end;
+            gap: 2.5px;
+            height: 14px;
+        }
+
+        .wave-bars span {
+            display: block;
+            width: 2.5px;
+            height: 5px;
+            background: var(--gold-main);
+            border-radius: 2px;
+        }
+
+        .wave-bars.playing span:nth-child(1) { animation: barAnim 0.8s ease-in-out infinite; }
+        .wave-bars.playing span:nth-child(2) { animation: barAnim 0.6s ease-in-out infinite 0.15s; }
+        .wave-bars.playing span:nth-child(3) { animation: barAnim 0.9s ease-in-out infinite 0.3s; }
+        .wave-bars.playing span:nth-child(4) { animation: barAnim 0.7s ease-in-out infinite 0.2s; }
+
+        @keyframes barAnim {
+            0%, 100% { height: 4px; }
+            50% { height: 14px; }
+        }
+
+        #toast-msg {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1200;
+            background: var(--maroon-deep);
+            color: var(--gold-light);
+            border: 1px solid var(--gold-main);
+            padding: 10px 20px;
+            border-radius: 999px;
+            font-size: 13.5px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            display: none;
+            white-space: nowrap;
+        }
+
+        /* =====================================================================
+           2. INNER CARD CONTENT (WARM CREAM & ROYAL MAROON)
+           ===================================================================== */
+        #main-card {
+            display: none;
+            min-height: 100vh;
+            background-color: var(--cream-bg);
+            background-image: radial-gradient(rgba(212, 175, 55, 0.18) 1px, transparent 1px);
+            background-size: 24px 24px;
+            padding: 16px 12px 48px;
+        }
+
+        .card-container {
+            max-width: 780px;
+            margin: 0 auto;
+            background: var(--cream-white);
+            border: 1.5px solid rgba(212, 175, 55, 0.65);
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 18px 45px rgba(74, 14, 28, 0.12), inset 0 0 0 5px var(--cream-white), inset 0 0 0 6px rgba(212, 175, 55, 0.35);
+        }
+
+        /* Top Maroon Header Banner */
+        .card-header {
+            background: linear-gradient(165deg, #5E1224 0%, #4A0E1C 65%, #380914 100%);
+            color: var(--cream-white);
+            text-align: center;
+            padding: 40px 20px 46px;
+            position: relative;
+            border-bottom: 3px solid var(--gold-main);
+        }
+
+        .bismillah-arabic {
+            font-size: 32px;
+            color: var(--gold-main);
+            margin-bottom: 6px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .bismillah-bn {
+            font-size: 18px;
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+
+        .bismillah-meaning {
+            font-size: 13px;
+            color: rgba(253, 248, 242, 0.8);
+            margin-top: 2px;
+        }
+
+        .divider-ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 20px auto;
+        }
+
+        .divider-line {
+            height: 1px;
+            width: 70px;
+            background: linear-gradient(90deg, transparent, var(--gold-main), transparent);
+        }
+
+        .header-pill {
+            display: inline-block;
+            padding: 5px 16px;
+            border-radius: 999px;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            color: var(--gold-light);
+            font-size: 13px;
+            margin-bottom: 14px;
+        }
+
+        .header-couple-name {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        .header-and {
+            font-size: 17px;
+            color: var(--gold-light);
+            margin: 4px 0;
+        }
+
+        /* Inner Sections */
+        .section-block {
+            padding: 32px 20px;
+            text-align: center;
+        }
+
+        .section-kicker {
+            display: inline-block;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--maroon-rich);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .section-heading {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--maroon-deep);
+            margin-bottom: 18px;
+        }
+
+        /* Invitation Message Box */
+        .invitation-box {
+            background: var(--cream-card);
+            border: 1.5px solid rgba(212, 175, 55, 0.55);
+            border-radius: 22px;
+            padding: 24px 20px;
+            position: relative;
+            box-shadow: 0 6px 20px rgba(74, 14, 28, 0.05);
+        }
+
+        .invitation-salam {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--maroon-rich);
+            margin-bottom: 12px;
+        }
+
+        .invitation-text {
+            font-size: 16px;
+            color: var(--text-dark);
+            line-height: 1.85;
+        }
+
+        .invitation-highlight {
+            font-weight: 700;
+            color: var(--maroon-deep);
+        }
+
+        /* Bride & Groom Grid */
+        .couple-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 22px;
+            margin-top: 8px;
+        }
+
+        @media (min-width: 680px) {
+            .couple-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .cover-title { font-size: 40px; }
+            .header-couple-name { font-size: 34px; }
+            .section-block { padding: 38px 34px; }
+        }
+
+        .person-card {
+            background: var(--cream-white);
+            border: 1.5px solid rgba(212, 175, 55, 0.55);
+            border-radius: 24px;
+            padding: 24px 18px;
+            box-shadow: 0 10px 28px rgba(74, 14, 28, 0.07);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .person-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--maroon-deep), var(--gold-main), var(--maroon-deep));
+        }
+
+        .avatar-frame {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #FFFDF9 40%, #F4E7D4 100%);
+            border: 2px solid var(--gold-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 6px 18px rgba(74, 14, 28, 0.1);
+        }
+
+        .role-badge {
+            position: absolute;
+            bottom: -10px;
+            background: var(--maroon-deep);
+            color: var(--gold-light);
+            border: 1px solid var(--gold-main);
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 2px 16px;
+            border-radius: 999px;
+        }
+
+        .person-name {
+            font-size: 21px;
+            font-weight: 700;
+            color: var(--maroon-deep);
+            margin: 8px 0 14px;
+        }
+
+        .person-info-box {
+            background: var(--cream-card);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            border-radius: 16px;
+            padding: 14px;
+            font-size: 14.5px;
+            color: var(--text-dark);
+            text-align: center;
+        }
+
+        .person-info-box p {
+            margin-bottom: 6px;
+        }
+
+        .person-info-box p:last-child {
+            margin-bottom: 0;
+            padding-top: 8px;
+            border-top: 1px dashed rgba(158, 123, 28, 0.35);
+            font-size: 13.5px;
+            color: var(--text-muted);
+        }
+
+        .info-label {
+            font-weight: 700;
+            color: var(--maroon-rich);
+        }
+
+        /* Venue & Countdown Banner */
+        .venue-banner {
+            background: linear-gradient(165deg, #5E1224 0%, #4A0E1C 100%);
+            color: var(--cream-white);
+            border-radius: 24px;
+            padding: 28px 18px;
+            border: 1.5px solid var(--gold-main);
+            box-shadow: 0 12px 30px rgba(74, 14, 28, 0.18);
+        }
+
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            max-width: 420px;
+            margin: 18px auto 24px;
+        }
+
+        .cd-box {
+            background: rgba(253, 248, 242, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            border-radius: 14px;
+            padding: 10px 4px;
+        }
+
+        .cd-num {
+            display: block;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gold-main);
+        }
+
+        .cd-label {
+            font-size: 12px;
+            color: var(--gold-light);
+        }
+
+        .venue-details-card {
+            background: rgba(43, 7, 16, 0.55);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 18px;
+            padding: 20px 16px;
+            margin-top: 10px;
+        }
+
+        .venue-date-text {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 4px;
+        }
+
+        .venue-time-text {
+            font-size: 14.5px;
+            color: #FAF2E6;
+            margin-bottom: 14px;
+        }
+
+        .venue-name {
+            font-size: 21px;
+            font-weight: 700;
+            color: var(--gold-main);
+            margin-bottom: 4px;
+        }
+
+        .venue-address {
+            font-size: 14.5px;
+            color: #FAF2E6;
+            margin-bottom: 18px;
+        }
+
+        .map-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #B88924 0%, #F5E199 50%, #C5962C 100%);
+            color: #360812;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+            transition: transform 0.2s ease;
+        }
+
+        .map-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Contact Cards */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        @media (min-width: 600px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .contact-card {
+            background: var(--cream-card);
+            border: 1.5px solid rgba(212, 175, 55, 0.5);
+            border-radius: 18px;
+            padding: 18px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-number {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--maroon-deep);
+            letter-spacing: 0.5px;
+        }
+
+        .contact-actions {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .btn-call {
+            flex: 1;
+            max-width: 130px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 9px 14px;
+            border-radius: 999px;
+            background: var(--maroon-deep);
+            color: var(--gold-light);
+            border: 1px solid var(--gold-main);
+            font-size: 13.5px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn-copy {
+            flex: 1;
+            max-width: 120px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 9px 14px;
+            border-radius: 999px;
+            background: var(--cream-white);
+            color: var(--maroon-deep);
+            border: 1px solid var(--maroon-rich);
+            font-family: inherit;
+            font-size: 13.5px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Wishes / Email Form */
+        .wishes-box {
+            background: var(--cream-card);
+            border: 1.5px solid rgba(212, 175, 55, 0.55);
+            border-radius: 22px;
+            padding: 24px 18px;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 14px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--maroon-deep);
+            margin-bottom: 6px;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 14px;
+            border: 1.5px solid rgba(158, 123, 28, 0.45);
+            background: var(--cream-white);
+            color: var(--text-dark);
+            font-family: inherit;
+            font-size: 14.5px;
+            outline: none;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            border-color: var(--maroon-deep);
+        }
+
+        .submit-wish-btn {
+            width: 100%;
+            padding: 13px 20px;
+            border-radius: 999px;
+            border: 1px solid var(--gold-main);
+            background: linear-gradient(135deg, #5E1224 0%, #4A0E1C 100%);
+            color: var(--gold-light);
+            font-family: inherit;
+            font-size: 15.5px;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 6px 18px rgba(74, 14, 28, 0.2);
+        }
+
+        .email-direct-note {
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px dashed rgba(158, 123, 28, 0.4);
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .email-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 6px;
+            padding: 5px 14px;
+            border-radius: 999px;
+            background: var(--cream-white);
+            border: 1px solid rgba(212, 175, 55, 0.6);
+            color: var(--maroon-deep);
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        .card-footer {
+            background: var(--maroon-deep);
+            color: var(--gold-light);
+            text-align: center;
+            padding: 24px 16px;
+            border-top: 2px solid var(--gold-main);
+            font-size: 13.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Toast Message -->
+    <div id="toast-msg"></div>
+
+    <!-- Top-Right Music Toggle Button -->
+    <div id="music-control-wrap">
+        <button type="button" class="music-btn" onclick="toggleMusic()" aria-label="বিয়ের সুর চালু বা বন্ধ করুন">
+            <span id="wave-bars" class="wave-bars">
+                <span></span><span></span><span></span><span></span>
+            </span>
+            <span id="music-label">সুর চলছে</span>
+        </button>
+    </div>
+
+    <!-- =====================================================================
+         1. WELCOME COVER SCREEN (ROYAL MAROON & GOLD)
+         ===================================================================== -->
+    <section id="welcome-screen" aria-label="স্বাগতম পর্দা">
+        <div class="cover-corner c-tl"></div>
+        <div class="cover-corner c-tr"></div>
+        <div class="cover-corner c-bl"></div>
+        <div class="cover-corner c-br"></div>
+
+        <!-- Subtle Background Mandala -->
+        <svg class="cover-mandala" viewBox="0 0 200 200" fill="none">
+            <circle cx="100" cy="100" r="94" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 3"/>
+            <circle cx="100" cy="100" r="78" stroke="currentColor" stroke-width="0.8"/>
+            <polygon points="100,10 123,77 190,100 123,123 100,190 77,123 10,100 77,77" stroke="currentColor" stroke-width="0.8"/>
+            <polygon points="100,10 123,77 190,100 123,123 100,190 77,123 10,100 77,77" stroke="currentColor" stroke-width="0.8" transform="rotate(45 100 100)"/>
+        </svg>
+
+        <div class="welcome-box">
+            <div class="cover-badge">
+                <span>✦</span>
+                <span>শুভ বিবাহের সাদর আমন্ত্রণ</span>
+                <span>✦</span>
+            </div>
+
+            <div>
+                <h1 class="cover-title gold-shimmer">সোহাগ ও নুসরাত</h1>
+                <p class="cover-subnames">হোসেন শাহরিয়ার (সোহাগ) ও উম্মে আয়মান নুসরাত</p>
+            </div>
+
+            <!-- Gold Monogram Emblem -->
+            <div class="monogram-circle">
+                <svg width="50" height="50" viewBox="0 0 64 64" fill="none">
+                    <path d="M32 6L36 18L48 14L40 25L52 32L40 39L48 50L36 46L32 58L28 46L16 50L24 39L12 32L24 25L16 14L28 18L32 6Z" stroke="#D4AF37" stroke-width="1.5" fill="rgba(212,175,55,0.16)"/>
+                    <circle cx="32" cy="32" r="11" stroke="#F3E5AB" stroke-width="1.4"/>
+                    <text x="32" y="36" text-anchor="middle" fill="#F3E5AB" font-size="10" font-weight="bold">স &amp; ন</text>
+                </svg>
+            </div>
+
+            <p class="cover-tagline">
+                আমাদের জীবনের সবচেয়ে সুন্দর ও পবিত্র মুহূর্তে আপনার ও আপনার পরিবারের সাদর উপস্থিতি ও দোয়া কামনা করছি।
+            </p>
+
+            <div class="cover-date-pill">
+                শুক্রবার, ১৮ ডিসেম্বর ২০২৬
+            </div>
+
+            <button id="welcome-enter-btn" type="button" class="welcome-btn" onclick="openWeddingCard()">
+                <span>Welcome</span>
+                <span>•</span>
+                <span>প্রবেশ করুন</span>
+                <span>→</span>
+            </button>
+
+            <p class="cover-hint">কার্ডটি খুলতে উপরের Welcome বাটনে চাপ দিন</p>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         2. MAIN DIGITAL INVITATION CARD (WARM CREAM & ROYAL MAROON)
+         ===================================================================== -->
+    <main id="main-card">
+        <div class="card-container">
+
+            <!-- HEADER: BISMILLAH -->
+            <header class="card-header">
+                <p class="bismillah-arabic" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ</p>
+                <p class="bismillah-bn">বিসমিল্লাহির রাহমানির রাহিম</p>
+                <p class="bismillah-meaning">পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে শুরু করছি</p>
+
+                <div class="divider-ornament">
+                    <span class="divider-line"></span>
+                    <span style="color:#D4AF37;font-size:18px;">✦</span>
+                    <span class="divider-line"></span>
+                </div>
+
+                <div class="header-pill">শুভ বিবাহ ও প্রীতিভোজ অনুষ্ঠান</div>
+
+                <h2 class="header-couple-name gold-shimmer">হোসেন শাহরিয়ার (সোহাগ)</h2>
+                <p class="header-and">ও</p>
+                <h2 class="header-couple-name gold-shimmer">উম্মে আয়মান নুসরাত</h2>
+            </header>
+
+            <!-- SECTION: UNIVERSAL INVITATION MESSAGE -->
+            <section class="section-block">
+                <span class="section-kicker">— সাদর আমন্ত্রণ —</span>
+                <h3 class="section-heading">নিমন্ত্রণ বার্তা</h3>
+
+                <div class="invitation-box">
+                    <p class="invitation-salam">সুধী, আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহ</p>
+                    <p class="invitation-text">
+                        <span class="invitation-highlight">মহান আল্লাহ তায়ালার অশেষ মেহেরবানীতে আমাদের প্রিয় সন্তানদের শুভ বিবাহ সম্পন্ন হতে যাচ্ছে।</span>
+                        আমাদের পরিবারের এই আনন্দঘন ও পবিত্র মুহূর্তে আপনার ও আপনার পরিবারের সাদর উপস্থিতি ও আন্তরিক দোয়া কামনা করছি। আপনাদের স্নেহময় উপস্থিতি ও শুভকামনা আমাদের এই শুভ আয়োজনকে আরও পরিপূর্ণ ও স্মরণীয় করে তুলবে।
+                    </p>
+                </div>
+            </section>
+
+            <div class="divider-ornament">
+                <span class="divider-line"></span>
+                <span style="color:#9E7B1C;font-size:18px;">❦</span>
+                <span class="divider-line"></span>
+            </div>
+
+            <!-- SECTION: GROOM & BRIDE DETAILS WITH CUSTOM CARTOON ILLUSTRATIONS -->
+            <section class="section-block" style="padding-top:14px;">
+                <span class="section-kicker">— শুভ পরিণয় —</span>
+                <h3 class="section-heading">বর ও কনের পরিচিতি</h3>
+
+                <div class="couple-grid">
+                    <!-- GROOM CARD -->
+                    <div class="person-card">
+                        <div class="avatar-frame">
+                            <!-- Custom SVG Cartoon: Bengali Groom in Cream & Gold Sherwani + Maroon/Gold Pagri -->
+                            <svg width="124" height="124" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="80" cy="80" r="72" fill="#FDF8F2"/>
+                                <!-- Sherwani Body -->
+                                <path d="M30 148C33 118 52 106 80 106C108 106 127 118 130 148H30Z" fill="#F6EBDC" stroke="#9E7B1C" stroke-width="2"/>
+                                <!-- Royal Maroon Dupatta / Stole -->
+                                <path d="M45 111C51 124 54 136 55 148H41C40 135 41 122 45 111Z" fill="#5E1224"/>
+                                <path d="M45 111C51 124 54 136 55 148" stroke="#D4AF37" stroke-width="1.6"/>
+                                <!-- Gold Collar & Buttons -->
+                                <path d="M67 104L80 115L93 104L89 115L80 121L71 115L67 104Z" fill="#D4AF37"/>
+                                <line x1="80" y1="119" x2="80" y2="148" stroke="#9E7B1C" stroke-width="2"/>
+                                <circle cx="80" cy="126" r="2.2" fill="#D4AF37"/>
+                                <circle cx="80" cy="134" r="2.2" fill="#D4AF37"/>
+                                <circle cx="80" cy="142" r="2.2" fill="#D4AF37"/>
+                                <!-- Neck & Ears -->
+                                <rect x="72" y="92" width="16" height="16" rx="6" fill="#E6B593"/>
+                                <circle cx="53" cy="74" r="5.5" fill="#E6B593"/>
+                                <circle cx="107" cy="74" r="5.5" fill="#E6B593"/>
+                                <!-- Face -->
+                                <path d="M55 62C55 48 66 42 80 42C94 42 105 48 105 62V74C105 89 94 98 80 98C66 98 55 89 55 74V62Z" fill="#F2C5A4"/>
+                                <!-- Neat Beard -->
+                                <path d="M55 64C55 58 57 54 58 54V72C58 83 67 93 80 93C93 93 102 83 102 72V54C103 54 105 58 105 64V74C105 89 94 98 80 98C66 98 55 89 55 74V64Z" fill="#231F20" opacity="0.88"/>
+                                <!-- Eyes, Brows & Smile -->
+                                <path d="M64 65C67 63 71 63 74 65" stroke="#231F20" stroke-width="2.2" stroke-linecap="round"/>
+                                <path d="M86 65C89 63 93 63 96 65" stroke="#231F20" stroke-width="2.2" stroke-linecap="round"/>
+                                <circle cx="69" cy="71" r="2.8" fill="#1F2937"/>
+                                <circle cx="91" cy="71" r="2.8" fill="#1F2937"/>
+                                <circle cx="70" cy="70" r="0.9" fill="#FFFFFF"/>
+                                <circle cx="92" cy="70" r="0.9" fill="#FFFFFF"/>
+                                <path d="M72 84C75 82.5 78 82.5 80 84C82 82.5 85 82.5 88 84" stroke="#231F20" stroke-width="1.8" stroke-linecap="round"/>
+                                <path d="M74 88C77 90.5 83 90.5 86 88" stroke="#8C3B3B" stroke-width="2" stroke-linecap="round"/>
+                                <!-- Royal Maroon & Gold Pagri (Turban) -->
+                                <path d="M49 54C49 33 62 21 80 21C98 21 111 33 111 54C102 58 91 59 80 59C69 59 58 58 49 54Z" fill="#5E1224" stroke="#D4AF37" stroke-width="1.8"/>
+                                <path d="M51 47C63 35 86 30 108 42" stroke="#D4AF37" stroke-width="3"/>
+                                <path d="M109 47C97 35 74 30 52 42" stroke="#F3E5AB" stroke-width="2.2"/>
+                                <path d="M50 53C68 57 92 57 110 53" stroke="#D4AF37" stroke-width="2.5"/>
+                                <!-- Kalgi Feather & Jewel -->
+                                <path d="M80 25C77 15 81 9 85 8C84 14 83 19 82 25" fill="#F3E5AB" stroke="#D4AF37" stroke-width="1.2"/>
+                                <ellipse cx="80" cy="31" rx="4.5" ry="6.5" fill="#FDF8F2" stroke="#D4AF37" stroke-width="1.8"/>
+                                <circle cx="80" cy="31" r="2.2" fill="#5E1224"/>
+                            </svg>
+                            <span class="role-badge">বর</span>
+                        </div>
+
+                        <h4 class="person-name">হোসেন শাহরিয়ার (সোহাগ)</h4>
+                        <div class="person-info-box">
+                            <p><span class="info-label">পিতা:</span> আহমেদ আলী</p>
+                            <p><span class="info-label">মাতা:</span> সেলিনা আক্তার</p>
+                            <p><span class="info-label">ঠিকানা:</span> খালইস্ট, মুন্সিগঞ্জ সদর, মুন্সিগঞ্জ।</p>
+                        </div>
+                    </div>
+
+                    <!-- BRIDE CARD -->
+                    <div class="person-card">
+                        <div class="avatar-frame">
+                            <!-- Custom SVG Cartoon: Bengali Bride in Traditional Maroon/Red & Gold Saree + Hijab -->
+                            <svg width="124" height="124" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="80" cy="80" r="72" fill="#FDF8F2"/>
+                                <!-- Bridal Saree Shoulders & Drape -->
+                                <path d="M30 148C34 118 52 106 80 106C108 106 126 118 130 148H30Z" fill="#7A1328" stroke="#D4AF37" stroke-width="2"/>
+                                <!-- Gold Saree Pallu / Aanchal -->
+                                <path d="M44 114C62 126 88 136 118 148H94C72 138 54 128 40 118L44 114Z" fill="#D4AF37"/>
+                                <path d="M44 114C62 126 88 136 118 148" stroke="#F3E5AB" stroke-width="1.4"/>
+                                <!-- Hijab Outer Frame (Rich Maroon & Gold Trim) -->
+                                <path d="M45 72C45 42 60 26 80 26C100 26 115 42 115 72C115 98 102 116 80 118C58 116 45 98 45 72Z" fill="#5E1224" stroke="#D4AF37" stroke-width="2"/>
+                                <!-- Inner Gold Hijab Cap Border -->
+                                <path d="M53 68C53 47 64 36 80 36C96 36 107 47 107 68C107 88 96 101 80 101C64 101 53 88 53 68Z" fill="#F3E5AB"/>
+                                <!-- Face -->
+                                <path d="M57 67C57 50 67 42 80 42C93 42 103 50 103 67C103 85 93 96 80 96C67 96 57 85 57 67Z" fill="#F6CEB2"/>
+                                <!-- Bridal Tikli (Forehead Ornament) -->
+                                <line x1="80" y1="36" x2="80" y2="48" stroke="#D4AF37" stroke-width="1.8"/>
+                                <circle cx="80" cy="50" r="3.6" fill="#D4AF37" stroke="#5E1224" stroke-width="1"/>
+                                <!-- Soft Blush -->
+                                <ellipse cx="65" cy="76" rx="4.5" ry="2.5" fill="#E88D96" opacity="0.5"/>
+                                <ellipse cx="95" cy="76" rx="4.5" ry="2.5" fill="#E88D96" opacity="0.5"/>
+                                <!-- Eyes, Lashes & Gentle Smile -->
+                                <path d="M64 65C67 63 71 63 74 65" stroke="#2B181C" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M86 65C89 63 93 63 96 65" stroke="#2B181C" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="69" cy="70" r="2.8" fill="#1F2937"/>
+                                <circle cx="91" cy="70" r="2.8" fill="#1F2937"/>
+                                <circle cx="70" cy="69" r="0.9" fill="#FFFFFF"/>
+                                <circle cx="92" cy="69" r="0.9" fill="#FFFFFF"/>
+                                <path d="M74 84C77 87 83 87 86 84" stroke="#9E2A3B" stroke-width="2.2" stroke-linecap="round"/>
+                                <!-- Bridal Gold Necklace -->
+                                <path d="M64 103C70 111 90 111 96 103" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="80" cy="110" r="3" fill="#F3E5AB" stroke="#9E7B1C" stroke-width="1"/>
+                            </svg>
+                            <span class="role-badge">কনে</span>
+                        </div>
+
+                        <h4 class="person-name">উম্মে আয়মান নুসরাত</h4>
+                        <div class="person-info-box">
+                            <p><span class="info-label">পিতা:</span> নুরউদ্দিন সরকার</p>
+                            <p><span class="info-label">মাতা:</span> জেসমিন আক্তার</p>
+                            <p><span class="info-label">ঠিকানা:</span> প্রিমিয়ার প্যালেস, শহর পল্লী আবাসিক এলাকা, ডেমরা, মাতুয়াইল, ঢাকা।</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: VENUE & LIVE COUNTDOWN -->
+            <section class="section-block" style="padding-top:10px;">
+                <div class="venue-banner">
+                    <span style="color:#F3E5AB;font-size:12.5px;letter-spacing:1px;">— অনুষ্ঠানের সময়সূচী ও স্থান —</span>
+                    <h3 style="font-size:24px;color:#D4AF37;margin-top:4px;">শুভ পরিণয়ের আর বাকি</h3>
+
+                    <!-- Live Countdown -->
+                    <div class="countdown-grid" aria-label="কাউন্টডাউন টাইমার">
+                        <div class="cd-box">
+                            <span id="cd-days" class="cd-num">০০</span>
+                            <span class="cd-label">দিন</span>
+                        </div>
+                        <div class="cd-box">
+                            <span id="cd-hours" class="cd-num">০০</span>
+                            <span class="cd-label">ঘণ্টা</span>
+                        </div>
+                        <div class="cd-box">
+                            <span id="cd-minutes" class="cd-num">০০</span>
+                            <span class="cd-label">মিনিট</span>
+                        </div>
+                        <div class="cd-box">
+                            <span id="cd-seconds" class="cd-num">০০</span>
+                            <span class="cd-label">সেকেন্ড</span>
+                        </div>
+                    </div>
+
+                    <div class="venue-details-card">
+                        <p class="venue-date-text">শুক্রবার, ১৮ ডিসেম্বর ২০২৬</p>
+                        <p class="venue-time-text">দুপুর ১:৩০ ঘটিকা (প্রীতিভোজ)</p>
+
+                        <div class="divider-ornament" style="margin:12px auto;">
+                            <span class="divider-line"></span>
+                            <span style="color:#D4AF37;font-size:14px;">✦</span>
+                            <span class="divider-line"></span>
+                        </div>
+
+                        <p class="venue-name">দ্যা ওয়ান রেস্টুরেন্ট (The One Restaurant)</p>
+                        <p class="venue-address">সাইনবোর্ড, ঢাকা</p>
+
+                        <a href="https://maps.app.goo.gl/FcFsJbf8ts4apKeH9?g_st=ac" target="_blank" rel="noopener noreferrer" class="map-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Google Maps লোকেশন দেখুন</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: CONTACT NUMBERS -->
+            <section class="section-block" style="padding-top:10px;">
+                <span class="section-kicker">— প্রয়োজনে যোগাযোগ —</span>
+                <h3 class="section-heading">যোগাযোগ নম্বর</h3>
+
+                <div class="contact-grid">
+                    <!-- Contact 1 -->
+                    <div class="contact-card">
+                        <span style="font-size:13px;color:var(--text-muted);font-weight:600;">জরুরি যোগাযোগ ১</span>
+                        <span class="contact-number">01918169606</span>
+                        <div class="contact-actions">
+                            <a href="tel:01918169606" class="btn-call">
+                                <span>📞</span>
+                                <span>কল করুন</span>
+                            </a>
+                            <button type="button" class="btn-copy" onclick="copyText('01918169606', 'নম্বর কপি হয়েছে: 01918169606')">
+                                <span>📋</span>
+                                <span>কপি</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Contact 2 -->
+                    <div class="contact-card">
+                        <span style="font-size:13px;color:var(--text-muted);font-weight:600;">জরুরি যোগাযোগ ২</span>
+                        <span class="contact-number">01991922242</span>
+                        <div class="contact-actions">
+                            <a href="tel:01991922242" class="btn-call">
+                                <span>📞</span>
+                                <span>কল করুন</span>
+                            </a>
+                            <button type="button" class="btn-copy" onclick="copyText('01991922242', 'নম্বর কপি হয়েছে: 01991922242')">
+                                <span>📋</span>
+                                <span>কপি</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: SEND WISHES VIA EMAIL -->
+            <section class="section-block" style="padding-top:10px;">
+                <span class="section-kicker">— দোয়া ও শুভকামনা —</span>
+                <h3 class="section-heading">শুভেচ্ছা বার্তা পাঠান</h3>
+
+                <div class="wishes-box">
+                    <form onsubmit="handleWishSubmit(event)">
+                        <div class="form-group">
+                            <label for="guest-name" class="form-label">আপনার নাম</label>
+                            <input id="guest-name" type="text" class="form-input" placeholder="যেমন: মো. তানভীর আহমেদ" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guest-wish" class="form-label">আপনার শুভেচ্ছা বা দোয়া বার্তা</label>
+                            <textarea id="guest-wish" rows="3" class="form-textarea" placeholder="নবদম্পতির জন্য আপনার আন্তরিক দোয়া ও শুভকামনা লিখুন..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-wish-btn">
+                            <span>✉️</span>
+                            <span>ইমেইলে শুভেচ্ছা পাঠান</span>
+                        </button>
+                    </form>
+
+                    <div class="email-direct-note">
+                        <p>বার্তাটি সরাসরি নিচের ইমেইলে চলে যাবে (কপি করতে ইমেইলে চাপ দিন):</p>
+                        <button type="button" class="email-pill" onclick="copyText('shahriar.h.sohag@gmail.com', 'ইমেইল কপি হয়েছে: shahriar.h.sohag@gmail.com')">
+                            <span>shahriar.h.sohag@gmail.com</span>
+                            <span>📋</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="card-footer">
+                <p style="font-weight:700;font-size:15px;margin-bottom:4px;">সোহাগ ও নুসরাত — শুভ বিবাহ ২০২৬</p>
+                <p style="opacity:0.85;">আপনার সাদর উপস্থিতি ও দোয়া একান্তভাবে কাম্য</p>
+            </footer>
+
+        </div>
+    </main>
+
+    <!-- =====================================================================
+         CLEAN VANILLA JAVASCRIPT (ZERO EXTERNAL DEPENDENCIES)
+         ===================================================================== -->
+    <script>
+        // 1. Toast Notification Helper
+        var toastTimer = null;
+        function showToast(text) {
+            var el = document.getElementById('toast-msg');
+            if (!el) return;
+            el.textContent = text;
+            el.style.display = 'block';
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(function () {
+                el.style.display = 'none';
+            }, 3000);
+        }
+
+        // 2. Clipboard Copy Helper (iFrame safe)
+        function copyText(text, successMsg) {
+            try {
+                var ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.position = 'fixed';
+                ta.style.left = '-9999px';
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showToast(successMsg || 'কপি করা হয়েছে');
+            } catch (e) {
+                showToast(text);
+            }
+        }
+
+        // 3. Gentle Romantic Instrumental Wedding Tune (Web Audio API)
+        var audioCtx = null;
+        var masterGain = null;
+        var isPlaying = false;
+        var noteTimeout = null;
+        var noteIndex = 0;
+
+        // Soft Music-Box / Harp Wedding Melody
+        var melodyNotes = [
+            { f: 523.25, d: 480 }, { f: 659.25, d: 480 }, { f: 783.99, d: 480 }, { f: 987.77, d: 720 },
+            { f: 880.00, d: 480 }, { f: 783.99, d: 900 },
+            { f: 698.46, d: 480 }, { f: 880.00, d: 480 }, { f: 1046.50, d: 680 }, { f: 987.77, d: 480 },
+            { f: 783.99, d: 480 }, { f: 659.25, d: 900 },
+            { f: 587.33, d: 480 }, { f: 659.25, d: 480 }, { f: 698.46, d: 480 }, { f: 880.00, d: 680 },
+            { f: 783.99, d: 520 }, { f: 659.25, d: 520 }, { f: 587.33, d: 550 }, { f: 523.25, d: 1100 }
+        ];
+
+        function playTone(freq, durMs) {
+            if (!audioCtx || !masterGain || !isPlaying) return;
+            try {
+                var now = audioCtx.currentTime;
+                var osc1 = audioCtx.createOscillator();
+                var osc2 = audioCtx.createOscillator();
+                var gain = audioCtx.createGain();
+                var overtoneGain = audioCtx.createGain();
+
+                osc1.type = 'sine';
+                osc2.type = 'triangle';
+                osc1.frequency.setValueAtTime(freq, now);
+                osc2.frequency.setValueAtTime(freq * 2, now);
+
+                overtoneGain.gain.setValueAtTime(0.05, now);
+                gain.gain.setValueAtTime(0.0001, now);
+                gain.gain.exponentialRampToValueAtTime(0.22, now + 0.03);
+                gain.gain.exponentialRampToValueAtTime(0.0008, now + (durMs / 1000) + 1.2);
+
+                osc1.connect(gain);
+                osc2.connect(overtoneGain);
+                overtoneGain.connect(gain);
+                gain.connect(masterGain);
+
+                osc1.start(now);
+                osc2.start(now);
+                osc1.stop(now + (durMs / 1000) + 1.3);
+                osc2.stop(now + (durMs / 1000) + 1.3);
+            } catch (e) {}
+        }
+
+        function stepMelody() {
+            if (!isPlaying) return;
+            var item = melodyNotes[noteIndex % melodyNotes.length];
+            playTone(item.f, item.d);
+            noteIndex++;
+            noteTimeout = setTimeout(stepMelody, item.d);
+        }
+
+        function updateMusicButtonUI(active) {
+            var bars = document.getElementById('wave-bars');
+            var label = document.getElementById('music-label');
+            if (bars) {
+                if (active) bars.classList.add('playing');
+                else bars.classList.remove('playing');
+            }
+            if (label) {
+                label.textContent = active ? 'সুর চলছে' : 'সুর বন্ধ';
+            }
+        }
+
+        function startMusic() {
+            try {
+                var AudioContextRef = window.AudioContext || window.webkitAudioContext;
+                if (!AudioContextRef) {
+                    updateMusicButtonUI(false);
+                    return;
+                }
+                if (!audioCtx) {
+                    audioCtx = new AudioContextRef();
+                    masterGain = audioCtx.createGain();
+                    masterGain.gain.setValueAtTime(0.38, audioCtx.currentTime);
+                    masterGain.connect(audioCtx.destination);
+                }
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                if (!isPlaying) {
+                    isPlaying = true;
+                    updateMusicButtonUI(true);
+                    stepMelody();
+                }
+            } catch (e) {
+                isPlaying = false;
+                updateMusicButtonUI(false);
+            }
+        }
+
+        function stopMusic() {
+            isPlaying = false;
+            clearTimeout(noteTimeout);
+            updateMusicButtonUI(false);
+        }
+
+        function toggleMusic() {
+            if (isPlaying) {
+                stopMusic();
+                showToast('বিয়ের সুর বন্ধ করা হয়েছে');
+            } else {
+                startMusic();
+                showToast('বিয়ের সুর চালু হয়েছে');
+            }
+        }
+
+        // 4. Open Welcome Screen -> Show Main Card & Start Music
+        function openWeddingCard() {
+            var welcome = document.getElementById('welcome-screen');
+            var mainCard = document.getElementById('main-card');
+            var musicWrap = document.getElementById('music-control-wrap');
+
+            if (mainCard) {
+                mainCard.style.display = 'block';
+            }
+            if (musicWrap) {
+                musicWrap.style.display = 'block';
+            }
+            if (welcome) {
+                welcome.classList.add('opened');
+            }
+
+            // Safely start gentle instrumental wedding melody
+            try {
+                startMusic();
+            } catch (e) {}
+
+            setTimeout(function () {
+                if (welcome) {
+                    welcome.style.display = 'none';
+                }
+                window.scrollTo(0, 0);
+            }, 650);
+        }
+
+        // Allow Enter key on Welcome screen
+        document.addEventListener('keydown', function (e) {
+            var welcome = document.getElementById('welcome-screen');
+            if (e.key === 'Enter' && welcome && welcome.style.display !== 'none') {
+                openWeddingCard();
+            }
+        });
+
+        // 5. Live Countdown Timer (Target: Friday, Dec 18, 2026, 1:30 PM Dhaka UTC+6)
+        var bnNums = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+        function toBnDigits(n) {
+            var s = String(n < 10 ? '0' + n : n);
+            var out = '';
+            for (var i = 0; i < s.length; i++) {
+                var idx = parseInt(s.charAt(i), 10);
+                out += isNaN(idx) ? s.charAt(i) : bnNums[idx];
+            }
+            return out;
+        }
+
+        var weddingTimestamp = new Date('2026-12-18T13:30:00+06:00').getTime();
+        function refreshCountdown() {
+            var now = Date.now();
+            var diff = weddingTimestamp - now;
+            if (diff <= 0) {
+                document.getElementById('cd-days').textContent = '০০';
+                document.getElementById('cd-hours').textContent = '০০';
+                document.getElementById('cd-minutes').textContent = '০০';
+                document.getElementById('cd-seconds').textContent = '০০';
+                return;
+            }
+            var days = Math.floor(diff / 86400000);
+            var hours = Math.floor((diff % 86400000) / 3600000);
+            var mins = Math.floor((diff % 3600000) / 60000);
+            var secs = Math.floor((diff % 60000) / 1000);
+
+            document.getElementById('cd-days').textContent = toBnDigits(days);
+            document.getElementById('cd-hours').textContent = toBnDigits(hours);
+            document.getElementById('cd-minutes').textContent = toBnDigits(mins);
+            document.getElementById('cd-seconds').textContent = toBnDigits(secs);
+        }
+        refreshCountdown();
+        setInterval(refreshCountdown, 1000);
+
+        // 6. Send Wishes via Email (shahriar.h.sohag@gmail.com)
+        function handleWishSubmit(e) {
+            e.preventDefault();
+            var name = document.getElementById('guest-name').value.trim();
+            var wish = document.getElementById('guest-wish').value.trim();
+            if (!name || !wish) return;
+
+            var toEmail = 'shahriar.h.sohag@gmail.com';
+            var subject = encodeURIComponent('শুভ বিবাহের শুভেচ্ছা বার্তা - ' + name);
+            var body = encodeURIComponent(
+                'আসসালামু আলাইকুম,\n\n' +
+                'হোসেন শাহরিয়ার (সোহাগ) ও উম্মে আয়মান নুসরাতের শুভ বিবাহ উপলক্ষে আন্তরিক শুভেচ্ছা ও দোয়া রইলো।\n\n' +
+                'শুভেচ্ছা বার্তা:\n"' + wish + '"\n\n' +
+                'শুভেচ্ছান্তে,\n' + name
+            );
+
+            showToast('আপনার ইমেইল অ্যাপ খোলা হচ্ছে...');
+            window.location.href = 'mailto:' + toEmail + '?subject=' + subject + '&body=' + body;
+        }
+    </script>
+</body>
+</html>
