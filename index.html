@@ -6,7 +6,7 @@
     <title>দুই ঘর, এক উৎসব | সোহাগ ও নুসরাতের শুভ বিবাহ</title>
     <style>
         /* =====================================================================
-           ROYAL MAROON & CREAM THEME - 100% SELF-CONTAINED EMBEDDED CSS
+           ROYAL MAROON & CREAM DIGITAL INVITATION CARD - EMBEDDED CSS
            ===================================================================== */
         :root {
             --maroon-deep: #4A0E1C;
@@ -41,7 +41,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Gold Shimmer Text */
+        /* Gold Shimmer & Subtle Royal Animations */
         .gold-shimmer {
             background: linear-gradient(135deg, #B88A1E 0%, #F5E199 35%, #D4AF37 65%, #FFF2BE 85%, #B88A1E 100%);
             -webkit-background-clip: text;
@@ -76,7 +76,7 @@
             100% { transform: translateY(105vh) rotate(360deg); opacity: 0; }
         }
 
-        /* Subtle Floating Gold Petals Container */
+        /* Floating Gold Petals Layer */
         #gold-petals {
             position: fixed;
             inset: 0;
@@ -97,7 +97,7 @@
         }
 
         /* =====================================================================
-           1. COVER SCREEN (WELCOME ENTRANCE GATE - ROYAL MAROON)
+           1. WELCOME ENTRANCE GATE (CLEANLY CENTERED & MOBILE SAFE)
            ===================================================================== */
         #welcome-screen {
             position: fixed;
@@ -122,8 +122,8 @@
 
         .cover-corner {
             position: fixed;
-            width: 48px;
-            height: 48px;
+            width: 46px;
+            height: 46px;
             border-color: rgba(212, 175, 55, 0.55);
             border-style: solid;
             pointer-events: none;
@@ -148,8 +148,8 @@
             z-index: 2;
             width: 100%;
             max-width: 430px;
-            background: rgba(54, 9, 20, 0.9);
-            border: 1.5px solid rgba(212, 175, 55, 0.52);
+            background: rgba(54, 9, 20, 0.92);
+            border: 1.5px solid rgba(212, 175, 55, 0.55);
             border-radius: 26px;
             padding: 28px 20px;
             text-align: center;
@@ -253,7 +253,7 @@
         }
 
         /* =====================================================================
-           FLOATING MUSIC TOGGLE BUTTON (TOP-RIGHT) & TOAST
+           FLOATING MUSIC TOGGLE (TOP-RIGHT), EDITOR BUTTON & TOAST
            ===================================================================== */
         #music-control-wrap {
             position: fixed;
@@ -304,9 +304,29 @@
             50% { height: 14px; }
         }
 
+        #edit-fab {
+            position: fixed;
+            bottom: 18px;
+            right: 18px;
+            z-index: 800;
+            display: none;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: var(--maroon-deep);
+            color: var(--gold-light);
+            border: 1.5px solid var(--gold-main);
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 8px 22px rgba(43, 24, 28, 0.28);
+        }
+
         #toast-msg {
             position: fixed;
-            bottom: 20px;
+            bottom: 22px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1200;
@@ -330,7 +350,7 @@
             background-color: var(--cream-bg);
             background-image: radial-gradient(rgba(212, 175, 55, 0.18) 1px, transparent 1px);
             background-size: 24px 24px;
-            padding: 16px 12px 48px;
+            padding: 16px 12px 64px;
         }
 
         .card-container {
@@ -436,9 +456,9 @@
 
         /* FEATURED BANNER: "দুই পরিবারের পক্ষ থেকে — দুই ঘর, এক উৎসব" */
         .union-banner {
-            margin: 26px auto 22px;
+            margin: 10px auto 22px;
             padding: 20px 16px;
-            background: linear-gradient(180deg, rgba(212, 175, 55, 0.12) 0%, rgba(94, 18, 36, 0.05) 100%);
+            background: linear-gradient(180deg, rgba(212, 175, 55, 0.14) 0%, rgba(94, 18, 36, 0.05) 100%);
             border-top: 1.5px solid rgba(212, 175, 55, 0.65);
             border-bottom: 1.5px solid rgba(212, 175, 55, 0.65);
             border-radius: 20px;
@@ -472,7 +492,7 @@
             font-size: 14px;
         }
 
-        /* Poetic & Royal Invitation Card */
+        /* Poetic & Universal Invitation Card */
         .invitation-box {
             background: linear-gradient(180deg, #FFFDF9 0%, #F8EFE3 100%);
             border: 1.5px solid rgba(212, 175, 55, 0.65);
@@ -490,7 +510,7 @@
         }
 
         .invitation-poetic-intro {
-            font-size: 16.2px;
+            font-size: 16px;
             font-style: italic;
             color: var(--maroon-deep);
             background: rgba(212, 175, 55, 0.13);
@@ -676,7 +696,6 @@
             margin-bottom: 14px;
         }
 
-        /* Direct Clickable Venue Location Link Box */
         .venue-location-link-box {
             display: block;
             text-decoration: none;
@@ -924,6 +943,58 @@
             cursor: pointer;
         }
 
+        /* Optional Details Editor Modal */
+        #editor-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1100;
+            background: rgba(34, 6, 13, 0.72);
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            overflow-y: auto;
+        }
+
+        .editor-card {
+            width: 100%;
+            max-width: 480px;
+            max-height: 88vh;
+            overflow-y: auto;
+            background: var(--cream-white);
+            border: 2px solid var(--gold-main);
+            border-radius: 24px;
+            padding: 22px 18px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+        }
+
+        .editor-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(158, 123, 28, 0.3);
+        }
+
+        .editor-close-btn {
+            background: transparent;
+            border: 1px solid var(--maroon-rich);
+            color: var(--maroon-deep);
+            border-radius: 999px;
+            padding: 4px 12px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .editor-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
         /* Footer */
         .card-footer {
             background: var(--maroon-deep);
@@ -940,8 +1011,8 @@
     <!-- Subtle Floating Gold Petals -->
     <div id="gold-petals" aria-hidden="true"></div>
 
-    <!-- Toast Message -->
-    <div id="toast-msg"></div>
+    <!-- Toast Notification -->
+    <div id="toast-msg" role="status" aria-live="polite"></div>
 
     <!-- Top-Right Music Toggle Button -->
     <div id="music-control-wrap">
@@ -953,8 +1024,14 @@
         </button>
     </div>
 
+    <!-- Optional Quick Details Editor Button -->
+    <button id="edit-fab" type="button" onclick="openEditorModal()" aria-label="তথ্য পরিবর্তন করুন">
+        <span>✏️</span>
+        <span>তথ্য এডিট</span>
+    </button>
+
     <!-- =====================================================================
-         1. WELCOME ENTRANCE GATE (ROYAL MAROON & GOLD)
+         1. WELCOME ENTRANCE GATE (CLEANLY CENTERED & RESPONSIVE)
          ===================================================================== -->
     <section id="welcome-screen" aria-label="স্বাগতম পর্দা">
         <div class="cover-corner c-tl"></div>
@@ -963,7 +1040,7 @@
         <div class="cover-corner c-br"></div>
 
         <!-- Subtle Background Mandala -->
-        <svg class="cover-mandala" viewBox="0 0 200 200" fill="none">
+        <svg class="cover-mandala" viewBox="0 0 200 200" fill="none" aria-hidden="true">
             <circle cx="100" cy="100" r="94" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 3"/>
             <circle cx="100" cy="100" r="78" stroke="currentColor" stroke-width="0.8"/>
             <polygon points="100,10 123,77 190,100 123,123 100,190 77,123 10,100 77,77" stroke="currentColor" stroke-width="0.8"/>
@@ -973,18 +1050,18 @@
         <div class="welcome-box">
             <div class="cover-badge">
                 <span>✦</span>
-                <span>দুই ঘর, এক উৎসব</span>
+                <span id="welcome-union-badge">দুই ঘর, এক উৎসব</span>
                 <span>✦</span>
             </div>
 
             <div>
-                <h1 class="cover-title gold-shimmer">সোহাগ ও নুসরাত</h1>
-                <p class="cover-subnames">হোসেন শাহরিয়ার (সোহাগ) ও উম্মে আয়মান নুসরাত</p>
+                <h1 id="welcome-couple-short" class="cover-title gold-shimmer">সোহাগ ও নুসরাত</h1>
+                <p id="welcome-couple-full" class="cover-subnames">হোসেন শাহরিয়ার (সোহাগ) ও উম্মে আয়মান নুসরাত</p>
             </div>
 
             <!-- Gold Monogram Emblem -->
             <div class="monogram-circle">
-                <svg width="50" height="50" viewBox="0 0 64 64" fill="none">
+                <svg width="50" height="50" viewBox="0 0 64 64" fill="none" aria-hidden="true">
                     <path d="M32 6L36 18L48 14L40 25L52 32L40 39L48 50L36 46L32 58L28 46L16 50L24 39L12 32L24 25L16 14L28 18L32 6Z" stroke="#D4AF37" stroke-width="1.5" fill="rgba(212,175,55,0.16)"/>
                     <circle cx="32" cy="32" r="11" stroke="#F3E5AB" stroke-width="1.4"/>
                     <text x="32" y="36" text-anchor="middle" fill="#F3E5AB" font-size="10" font-weight="bold">স &amp; ন</text>
@@ -995,7 +1072,7 @@
                 দুই পরিবারের পক্ষ থেকে আপনাকে ও আপনার পরিবারকে এই পবিত্র ও আনন্দঘন মিলনমেলায় সাদর আমন্ত্রণ জানাচ্ছি।
             </p>
 
-            <div class="cover-date-pill">
+            <div id="welcome-date-pill" class="cover-date-pill">
                 শুক্রবার, ১৮ ডিসেম্বর ২০২৬
             </div>
 
@@ -1006,7 +1083,7 @@
                 <span>→</span>
             </button>
 
-            <p class="cover-hint">কার্ডটি খুলতে উপরের Welcome বাটনে চাপ দিন</p>
+            <p class="cover-hint">কার্ডটি খুলতে উপরের Welcome বাটনে চাপ দিন (অথবা Enter/Space চাপুন)</p>
         </div>
     </section>
 
@@ -1030,17 +1107,16 @@
 
                 <div class="header-pill">শুভ বিবাহ ও প্রীতিভোজ অনুষ্ঠান</div>
 
-                <h2 class="header-couple-name gold-shimmer">হোসেন শাহরিয়ার (সোহাগ)</h2>
+                <h2 id="header-groom-name" class="header-couple-name gold-shimmer">হোসেন শাহরিয়ার (সোহাগ)</h2>
                 <p class="header-and">ও</p>
-                <h2 class="header-couple-name gold-shimmer">উম্মে আয়মান নুসরাত</h2>
+                <h2 id="header-bride-name" class="header-couple-name gold-shimmer">উম্মে আয়মান নুসরাত</h2>
             </header>
 
-            <!-- SECTION: FEATURED BANNER ("দুই পরিবারের পক্ষ থেকে — দুই ঘর, এক উৎসব") & POETIC INVITATION -->
+            <!-- SECTION: BANNER & UNIVERSAL POETIC INVITATION -->
             <section class="section-block">
-                <!-- Featured Union Banner from Reference Image -->
                 <div class="union-banner">
                     <p class="union-subtitle">দুই পরিবারের পক্ষ থেকে</p>
-                    <h3 class="union-main-title">দুই ঘর, এক উৎসব</h3>
+                    <h3 id="banner-union-title" class="union-main-title">দুই ঘর, এক উৎসব</h3>
                     <div class="union-ornament-row">
                         <span>━━</span>
                         <span>✦</span>
@@ -1048,24 +1124,23 @@
                     </div>
                 </div>
 
-                <span class="section-kicker">— সাদর আমন্ত্রণ —</span>
-                <h3 class="section-heading">নিমন্ত্রণ বার্তা</h3>
+                <span class="section-kicker">— সাদর আমন্ত্রণ ও শুভকামনা —</span>
+                <h3 class="section-heading">নিমন্ত্রণ ও শুভেচ্ছা বার্তা</h3>
 
                 <div class="invitation-box">
                     <p class="invitation-salam">সুধী, আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহ</p>
 
                     <div class="invitation-poetic-intro">
-                        “মহান আল্লাহ তায়ালার অশেষ মেহেরবানীতে দুটি হৃদয় ও দুটি পরিবারের মেলবন্ধনে শুরু হতে যাচ্ছে এক নতুন পথচলা।”
+                        “মহান আল্লাহ তায়ালার অশেষ মেহেরবানীতে দুটি হৃদয় ও দুটি পরিবারের মেলবন্ধনে শুরু হতে যাচ্ছে এক নতুন ও পবিত্র পথচলা।”
                     </div>
 
                     <p class="invitation-lead">
-                        আগামী <span class="invitation-highlight">শুক্রবার, ১৮ ডিসেম্বর ২০২৬</span> তারিখে<br>
-                        <span class="invitation-highlight">হোসেন শাহরিয়ার (সোহাগ)</span> ও <span class="invitation-highlight">উম্মে আয়মান নুসরাত</span>-এর<br>
-                        শুভ বিবাহ ও প্রীতিভোজ অনুষ্ঠিত হতে যাচ্ছে।
+                        <span id="invite-couple-highlight" class="invitation-highlight">হোসেন শাহরিয়ার (সোহাগ)</span> ও <span id="invite-bride-highlight" class="invitation-highlight">উম্মে আয়মান নুসরাত</span>-এর<br>
+                        <span class="invitation-highlight">শুভ বিবাহ ও প্রীতিভোজ</span> অনুষ্ঠিত হতে যাচ্ছে।
                     </p>
 
-                    <p class="invitation-text">
-                        জীবনের এই সবচেয়ে সুন্দর, পবিত্র ও আনন্দঘন মুহূর্তে আমাদের পরিবারের পক্ষ থেকে আপনাকে ও আপনার পরিবারকে সাদর আমন্ত্রণ জানাচ্ছি। আপনার স্নেহময় উপস্থিতি ও আন্তরিক দোয়া আমাদের এই মিলনমেলাকে পরিপূর্ণ ও চিরস্মরণীয় করে তুলবে।
+                    <p id="invite-universal-body" class="invitation-text">
+                        এই আনন্দঘন ও পবিত্র মুহূর্তে আমাদের পরিবারের পক্ষ থেকে আপনাকে ও আপনার পরিবারকে জানাই আন্তরিক নিমন্ত্রণ ও শুভেচ্ছা। আপনাদের সদয় উপস্থিতি, ভালোবাসা ও দোয়া আমাদের এই বিশেষ দিনটিকে আরও সুন্দর ও স্মরণীয় করে তুলবে।
                     </p>
                 </div>
             </section>
@@ -1076,7 +1151,7 @@
                 <span class="divider-line"></span>
             </div>
 
-            <!-- SECTION: GROOM & BRIDE DETAILS WITH CUSTOM CARTOON ILLUSTRATIONS -->
+            <!-- SECTION: GROOM & BRIDE DETAILS WITH CUSTOM SVG CARTOONS -->
             <section class="section-block" style="padding-top:14px;">
                 <span class="section-kicker">— শুভ পরিণয় —</span>
                 <h3 class="section-heading">বর ও কনের পরিচিতি</h3>
@@ -1085,15 +1160,15 @@
                     <!-- GROOM CARD -->
                     <div class="person-card">
                         <div class="avatar-frame">
-                            <!-- Custom SVG Cartoon: Bengali Groom in Cream & Gold Sherwani + Maroon/Gold Pagri -->
-                            <svg width="124" height="124" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Custom SVG Cartoon: Groom in Sherwani & Pagri (Turban) -->
+                            <svg width="124" height="124" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="শেরওয়ানি ও পাগড়ি পরা বরের কার্টুন ছবি">
                                 <circle cx="80" cy="80" r="72" fill="#FDF8F2"/>
-                                <!-- Sherwani Body -->
+                                <!-- Cream Sherwani Body -->
                                 <path d="M30 148C33 118 52 106 80 106C108 106 127 118 130 148H30Z" fill="#F6EBDC" stroke="#9E7B1C" stroke-width="2"/>
                                 <!-- Royal Maroon Dupatta / Stole -->
                                 <path d="M45 111C51 124 54 136 55 148H41C40 135 41 122 45 111Z" fill="#5E1224"/>
                                 <path d="M45 111C51 124 54 136 55 148" stroke="#D4AF37" stroke-width="1.6"/>
-                                <!-- Gold Collar & Buttons -->
+                                <!-- Gold Collar & Sherwani Buttons -->
                                 <path d="M67 104L80 115L93 104L89 115L80 121L71 115L67 104Z" fill="#D4AF37"/>
                                 <line x1="80" y1="119" x2="80" y2="148" stroke="#9E7B1C" stroke-width="2"/>
                                 <circle cx="80" cy="126" r="2.2" fill="#D4AF37"/>
@@ -1121,7 +1196,7 @@
                                 <path d="M51 47C63 35 86 30 108 42" stroke="#D4AF37" stroke-width="3"/>
                                 <path d="M109 47C97 35 74 30 52 42" stroke="#F3E5AB" stroke-width="2.2"/>
                                 <path d="M50 53C68 57 92 57 110 53" stroke="#D4AF37" stroke-width="2.5"/>
-                                <!-- Kalgi Feather & Jewel -->
+                                <!-- Kalgi & Crest -->
                                 <path d="M80 25C77 15 81 9 85 8C84 14 83 19 82 25" fill="#F3E5AB" stroke="#D4AF37" stroke-width="1.2"/>
                                 <ellipse cx="80" cy="31" rx="4.5" ry="6.5" fill="#FDF8F2" stroke="#D4AF37" stroke-width="1.8"/>
                                 <circle cx="80" cy="31" r="2.2" fill="#5E1224"/>
@@ -1129,38 +1204,38 @@
                             <span class="role-badge">বর</span>
                         </div>
 
-                        <h4 class="person-name">হোসেন শাহরিয়ার (সোহাগ)</h4>
+                        <h4 id="groom-card-name" class="person-name">হোসেন শাহরিয়ার (সোহাগ)</h4>
                         <div class="person-info-box">
-                            <p><span class="info-label">পিতা:</span> আহমেদ আলী</p>
-                            <p><span class="info-label">মাতা:</span> সেলিনা আক্তার</p>
-                            <p><span class="info-label">ঠিকানা:</span> খালইস্ট, মুন্সিগঞ্জ সদর, মুন্সিগঞ্জ।</p>
+                            <p><span class="info-label">পিতা:</span> <span id="groom-father">আহমেদ আলী</span></p>
+                            <p><span class="info-label">মাতা:</span> <span id="groom-mother">সেলিনা আক্তার</span></p>
+                            <p><span class="info-label">ঠিকানা:</span> <span id="groom-address">খালইস্ট, মুন্সিগঞ্জ সদর, মুন্সিগঞ্জ।</span></p>
                         </div>
                     </div>
 
                     <!-- BRIDE CARD -->
                     <div class="person-card">
                         <div class="avatar-frame">
-                            <!-- Custom SVG Cartoon: Bengali Bride in Traditional Red & Gold Saree + Hijab -->
-                            <svg width="124" height="124" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Custom SVG Cartoon: Bride in Traditional Red & Gold Saree + Hijab -->
+                            <svg width="124" height="124" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="শাড়ি ও হিজাব পরা কনের কার্টুন ছবি">
                                 <circle cx="80" cy="80" r="72" fill="#FDF8F2"/>
-                                <!-- Bridal Red & Gold Saree Shoulders & Drape -->
+                                <!-- Bridal Saree Shoulders & Drape -->
                                 <path d="M30 148C34 118 52 106 80 106C108 106 126 118 130 148H30Z" fill="#9B111E" stroke="#D4AF37" stroke-width="2"/>
-                                <!-- Gold Saree Pallu / Aanchal -->
+                                <!-- Gold Saree Pallu -->
                                 <path d="M44 114C62 126 88 136 118 148H94C72 138 54 128 40 118L44 114Z" fill="#D4AF37"/>
                                 <path d="M44 114C62 126 88 136 118 148" stroke="#F3E5AB" stroke-width="1.4"/>
-                                <!-- Hijab Outer Frame (Rich Bridal Crimson & Gold Trim) -->
+                                <!-- Hijab Outer Frame -->
                                 <path d="M45 72C45 42 60 26 80 26C100 26 115 42 115 72C115 98 102 116 80 118C58 116 45 98 45 72Z" fill="#7D0E1B" stroke="#D4AF37" stroke-width="2"/>
-                                <!-- Inner Gold Hijab Cap Border -->
+                                <!-- Inner Gold Hijab Trim -->
                                 <path d="M53 68C53 47 64 36 80 36C96 36 107 47 107 68C107 88 96 101 80 101C64 101 53 88 53 68Z" fill="#F3E5AB"/>
                                 <!-- Face -->
                                 <path d="M57 67C57 50 67 42 80 42C93 42 103 50 103 67C103 85 93 96 80 96C67 96 57 85 57 67Z" fill="#F6CEB2"/>
-                                <!-- Bridal Tikli (Forehead Ornament) -->
+                                <!-- Bridal Tikli -->
                                 <line x1="80" y1="36" x2="80" y2="48" stroke="#D4AF37" stroke-width="1.8"/>
                                 <circle cx="80" cy="50" r="3.6" fill="#D4AF37" stroke="#5E1224" stroke-width="1"/>
                                 <!-- Soft Blush -->
                                 <ellipse cx="65" cy="76" rx="4.5" ry="2.5" fill="#E88D96" opacity="0.5"/>
                                 <ellipse cx="95" cy="76" rx="4.5" ry="2.5" fill="#E88D96" opacity="0.5"/>
-                                <!-- Eyes, Lashes & Gentle Smile -->
+                                <!-- Eyes, Brows & Smile -->
                                 <path d="M64 65C67 63 71 63 74 65" stroke="#2B181C" stroke-width="2" stroke-linecap="round"/>
                                 <path d="M86 65C89 63 93 63 96 65" stroke="#2B181C" stroke-width="2" stroke-linecap="round"/>
                                 <circle cx="69" cy="70" r="2.8" fill="#1F2937"/>
@@ -1168,18 +1243,18 @@
                                 <circle cx="70" cy="69" r="0.9" fill="#FFFFFF"/>
                                 <circle cx="92" cy="69" r="0.9" fill="#FFFFFF"/>
                                 <path d="M74 84C77 87 83 87 86 84" stroke="#9E2A3B" stroke-width="2.2" stroke-linecap="round"/>
-                                <!-- Bridal Gold Necklace -->
+                                <!-- Gold Necklace -->
                                 <path d="M64 103C70 111 90 111 96 103" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/>
                                 <circle cx="80" cy="110" r="3" fill="#F3E5AB" stroke="#9E7B1C" stroke-width="1"/>
                             </svg>
                             <span class="role-badge">কনে</span>
                         </div>
 
-                        <h4 class="person-name">উম্মে আয়মান নুসরাত</h4>
+                        <h4 id="bride-card-name" class="person-name">উম্মে আয়মান নুসরাত</h4>
                         <div class="person-info-box">
-                            <p><span class="info-label">পিতা:</span> নুরউদ্দিন সরকার</p>
-                            <p><span class="info-label">মাতা:</span> জেসমিন আক্তার</p>
-                            <p><span class="info-label">ঠিকানা:</span> প্রিমিয়ার প্যালেস, শহর পল্লী আবাসিক এলাকা, ডেমরা, মাতুয়াইল, ঢাকা।</p>
+                            <p><span class="info-label">পিতা:</span> <span id="bride-father">নুরউদ্দিন সরকার</span></p>
+                            <p><span class="info-label">মাতা:</span> <span id="bride-mother">জেসমিন আক্তার</span></p>
+                            <p><span class="info-label">ঠিকানা:</span> <span id="bride-address">প্রিমিয়ার প্যালেস, শহর পল্লী আবাসিক এলাকা, ডেমরা, মাতুয়াইল, ঢাকা।</span></p>
                         </div>
                     </div>
                 </div>
@@ -1212,8 +1287,8 @@
                     </div>
 
                     <div class="venue-details-card">
-                        <p class="venue-date-text">শুক্রবার, ১৮ ডিসেম্বর ২০২৬</p>
-                        <p class="venue-time-text">দুপুর ১:৩০ ঘটিকা (প্রীতিভোজ)</p>
+                        <p id="venue-date-display" class="venue-date-text">১৮ ডিসেম্বর ২০২৬, শুক্রবার</p>
+                        <p id="venue-time-display" class="venue-time-text">দুপুর ১:৩০ ঘটিকা (শুভ বিবাহ ও প্রীতিভোজ)</p>
 
                         <div class="divider-ornament" style="margin:12px auto;">
                             <span class="divider-line"></span>
@@ -1221,18 +1296,18 @@
                             <span class="divider-line"></span>
                         </div>
 
-                        <!-- Clickable Venue Address Box (Directly opens Google Maps) -->
-                        <a href="https://maps.app.goo.gl/FcFsJbf8ts4apKeH9?g_st=ac" target="_blank" rel="noopener noreferrer" class="venue-location-link-box" title="গুগল ম্যাপে ভেন্যু দেখতে ক্লিক করুন">
-                            <p class="venue-name">দ্যা ওয়ান রেস্টুরেন্ট (The One Restaurant)</p>
+                        <!-- Clickable Venue Location Box -->
+                        <a id="venue-box-link" href="https://maps.app.goo.gl/FcFsJbf8ts4apKeH9?g_st=ac" target="_blank" rel="noopener noreferrer" class="venue-location-link-box" title="গুগল ম্যাপে ভেন্যু দেখতে ক্লিক করুন">
+                            <p id="venue-name-display" class="venue-name">দ্যা ওয়ান রেস্টুরেন্ট (The One Restaurant)</p>
                             <p class="venue-address">
                                 <span>📍</span>
-                                <span>সাইনবোর্ড, ঢাকা (ম্যাপ দেখতে ক্লিক করুন)</span>
+                                <span id="venue-area-display">সাইনবোর্ড, ঢাকা (ম্যাপ দেখতে ক্লিক করুন)</span>
                             </p>
                         </a>
 
-                        <!-- Prominent Google Maps Location Button -->
-                        <a href="https://maps.app.goo.gl/FcFsJbf8ts4apKeH9?g_st=ac" target="_blank" rel="noopener noreferrer" class="map-btn">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <!-- Direct Google Maps Button -->
+                        <a id="venue-map-btn" href="https://maps.app.goo.gl/FcFsJbf8ts4apKeH9?g_st=ac" target="_blank" rel="noopener noreferrer" class="map-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                                 <circle cx="12" cy="10" r="3"/>
                             </svg>
@@ -1248,32 +1323,32 @@
                 <h3 class="section-heading">যোগাযোগ নম্বর</h3>
 
                 <div class="contact-grid">
-                    <!-- Contact 1 -->
+                    <!-- Contact 1: 01918169606 -->
                     <div class="contact-card">
-                        <span style="font-size:13px;color:var(--text-muted);font-weight:600;">জরুরি যোগাযোগ ১</span>
-                        <span class="contact-number">01918169606</span>
+                        <span style="font-size:13px;color:var(--text-muted);font-weight:600;">যোগাযোগ নম্বর ১</span>
+                        <span id="contact-num-1" class="contact-number">01918169606</span>
                         <div class="contact-actions">
-                            <a href="tel:01918169606" class="btn-call">
+                            <a id="contact-call-1" href="tel:01918169606" class="btn-call">
                                 <span>📞</span>
                                 <span>কল করুন</span>
                             </a>
-                            <button type="button" class="btn-copy" onclick="copyText('01918169606', 'নম্বর কপি হয়েছে: 01918169606')">
+                            <button type="button" class="btn-copy" onclick="copyCurrentPhone(1)">
                                 <span>📋</span>
                                 <span>কপি</span>
                             </button>
                         </div>
                     </div>
 
-                    <!-- Contact 2 -->
+                    <!-- Contact 2: 01991922242 -->
                     <div class="contact-card">
-                        <span style="font-size:13px;color:var(--text-muted);font-weight:600;">জরুরি যোগাযোগ ২</span>
-                        <span class="contact-number">01991922242</span>
+                        <span style="font-size:13px;color:var(--text-muted);font-weight:600;">যোগাযোগ নম্বর ২</span>
+                        <span id="contact-num-2" class="contact-number">01991922242</span>
                         <div class="contact-actions">
-                            <a href="tel:01991922242" class="btn-call">
+                            <a id="contact-call-2" href="tel:01991922242" class="btn-call">
                                 <span>📞</span>
                                 <span>কল করুন</span>
                             </a>
-                            <button type="button" class="btn-copy" onclick="copyText('01991922242', 'নম্বর কপি হয়েছে: 01991922242')">
+                            <button type="button" class="btn-copy" onclick="copyCurrentPhone(2)">
                                 <span>📋</span>
                                 <span>কপি</span>
                             </button>
@@ -1282,7 +1357,7 @@
                 </div>
             </section>
 
-            <!-- SECTION: SEND WISHES DIRECTLY TO EMAIL -->
+            <!-- SECTION: SEND WISHES TO EMAIL -->
             <section class="section-block" style="padding-top:10px;">
                 <span class="section-kicker">— দোয়া ও শুভকামনা —</span>
                 <h3 class="section-heading">শুভেচ্ছা বার্তা পাঠান</h3>
@@ -1314,8 +1389,8 @@
 
                     <div class="email-direct-note">
                         <p>আপনার শুভেচ্ছা বার্তা সরাসরি নিচের ইমেইল ঠিকানায় পৌঁছে যাবে:</p>
-                        <button type="button" class="email-pill" onclick="copyText('shahriar.h.sohag@gmail.com', 'ইমেইল কপি হয়েছে: shahriar.h.sohag@gmail.com')">
-                            <span>shahriar.h.sohag@gmail.com</span>
+                        <button type="button" class="email-pill" onclick="copyCurrentEmail()">
+                            <span id="target-email-display">shahriar.h.sohag@gmail.com</span>
                             <span>📋</span>
                         </button>
                     </div>
@@ -1332,10 +1407,85 @@
     </main>
 
     <!-- =====================================================================
-         CLEAN VANILLA JAVASCRIPT (ZERO EXTERNAL DEPENDENCIES, TRY/CATCH SAFE)
+         OPTIONAL DETAILS EDITOR MODAL
+         ===================================================================== -->
+    <div id="editor-modal" role="dialog" aria-modal="true" aria-labelledby="editor-modal-title">
+        <div class="editor-card">
+            <div class="editor-header">
+                <h3 id="editor-modal-title" style="font-size:18px;color:var(--maroon-deep);">কার্ডের তথ্য এডিট করুন</h3>
+                <button type="button" class="editor-close-btn" onclick="closeEditorModal()">বন্ধ করুন ✕</button>
+            </div>
+
+            <div class="form-group">
+                <label for="ed-groom" class="form-label">বরের নাম</label>
+                <input id="ed-groom" type="text" class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="ed-bride" class="form-label">কনের নাম</label>
+                <input id="ed-bride" type="text" class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="ed-venue" class="form-label">ভেন্যুর নাম ও ঠিকানা</label>
+                <input id="ed-venue" type="text" class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="ed-map" class="form-label">Google Maps লিংক</label>
+                <input id="ed-map" type="url" class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="ed-phone1" class="form-label">যোগাযোগ নম্বর ১</label>
+                <input id="ed-phone1" type="tel" class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="ed-phone2" class="form-label">যোগাযোগ নম্বর ২</label>
+                <input id="ed-phone2" type="tel" class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="ed-email" class="form-label">শুভেচ্ছা গ্রহণের ইমেইল</label>
+                <input id="ed-email" type="email" class="form-input">
+            </div>
+
+            <div class="editor-actions">
+                <button type="button" class="submit-wish-btn" onclick="saveEditorChanges()">পরিবর্তন সেভ করুন</button>
+                <button type="button" class="direct-send-btn" onclick="resetDefaultDetails()">ডিফল্ট তথ্য</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         VANILLA JAVASCRIPT: MUSIC SYNTHESIZER, COUNTDOWN, EMAIL & EDITOR
          ===================================================================== -->
     <script>
-        // 0. Subtle Floating Gold Petals Generator
+        // Default Card State
+        var defaultCardData = {
+            groomName: 'হোসেন শাহরিয়ার (সোহাগ)',
+            brideName: 'উম্মে আয়মান নুসরাত',
+            venueName: 'দ্যা ওয়ান রেস্টুরেন্ট (The One Restaurant)',
+            venueArea: 'সাইনবোর্ড, ঢাকা (ম্যাপ দেখতে ক্লিক করুন)',
+            mapUrl: 'https://maps.app.goo.gl/FcFsJbf8ts4apKeH9?g_st=ac',
+            phone1: '01918169606',
+            phone2: '01991922242',
+            email: 'shahriar.h.sohag@gmail.com'
+        };
+
+        var cardData = {
+            groomName: defaultCardData.groomName,
+            brideName: defaultCardData.brideName,
+            venueName: defaultCardData.venueName,
+            venueArea: defaultCardData.venueArea,
+            mapUrl: defaultCardData.mapUrl,
+            phone1: defaultCardData.phone1,
+            phone2: defaultCardData.phone2,
+            email: defaultCardData.email
+        };
+
+        // 0. Floating Gold Petals Generator
         (function initGoldPetals() {
             try {
                 var container = document.getElementById('gold-petals');
@@ -1354,7 +1504,7 @@
             } catch (e) {}
         })();
 
-        // 1. Toast Notification Helper
+        // 1. Toast Notification Helper (never uses alert/confirm)
         var toastTimer = null;
         function showToast(text) {
             try {
@@ -1386,14 +1536,22 @@
             }
         }
 
-        // 3. Gentle Romantic Instrumental Wedding Tune (Web Audio API)
+        function copyCurrentPhone(numIndex) {
+            var phone = numIndex === 1 ? cardData.phone1 : cardData.phone2;
+            copyText(phone, 'নম্বর কপি হয়েছে: ' + phone);
+        }
+
+        function copyCurrentEmail() {
+            copyText(cardData.email, 'ইমেইল কপি হয়েছে: ' + cardData.email);
+        }
+
+        // 3. Gentle Instrumental Wedding Tune (Web Audio API Music Box / Harp / Bell Harmonics)
         var audioCtx = null;
         var masterGain = null;
         var isPlaying = false;
         var noteTimeout = null;
         var noteIndex = 0;
 
-        // Soft Music-Box / Harp Wedding Melody
         var melodyNotes = [
             { f: 523.25, d: 480 }, { f: 659.25, d: 480 }, { f: 783.99, d: 480 }, { f: 987.77, d: 720 },
             { f: 880.00, d: 480 }, { f: 783.99, d: 900 },
@@ -1407,30 +1565,43 @@
             if (!audioCtx || !masterGain || !isPlaying) return;
             try {
                 var now = audioCtx.currentTime;
+                // Music box fundamental + harp triangle + soft bell harmonic
                 var osc1 = audioCtx.createOscillator();
                 var osc2 = audioCtx.createOscillator();
+                var oscBell = audioCtx.createOscillator();
                 var gain = audioCtx.createGain();
-                var overtoneGain = audioCtx.createGain();
+                var harpGain = audioCtx.createGain();
+                var bellGain = audioCtx.createGain();
 
                 osc1.type = 'sine';
                 osc2.type = 'triangle';
+                oscBell.type = 'sine';
+
                 osc1.frequency.setValueAtTime(freq, now);
                 osc2.frequency.setValueAtTime(freq * 2, now);
+                oscBell.frequency.setValueAtTime(freq * 3, now);
 
-                overtoneGain.gain.setValueAtTime(0.05, now);
+                harpGain.gain.setValueAtTime(0.05, now);
+                bellGain.gain.setValueAtTime(0.018, now);
+
                 gain.gain.setValueAtTime(0.0001, now);
                 gain.gain.exponentialRampToValueAtTime(0.22, now + 0.03);
                 gain.gain.exponentialRampToValueAtTime(0.0008, now + (durMs / 1000) + 1.2);
 
                 osc1.connect(gain);
-                osc2.connect(overtoneGain);
-                overtoneGain.connect(gain);
+                osc2.connect(harpGain);
+                oscBell.connect(bellGain);
+                harpGain.connect(gain);
+                bellGain.connect(gain);
                 gain.connect(masterGain);
 
+                var stopTime = now + (durMs / 1000) + 1.3;
                 osc1.start(now);
                 osc2.start(now);
-                osc1.stop(now + (durMs / 1000) + 1.3);
-                osc2.stop(now + (durMs / 1000) + 1.3);
+                oscBell.start(now);
+                osc1.stop(stopTime);
+                osc2.stop(stopTime);
+                oscBell.stop(stopTime);
             } catch (e) {}
         }
 
@@ -1503,18 +1674,22 @@
             }
         }
 
-        // 4. Open Welcome Screen -> Show Main Card & Start Music
+        // 4. Open Welcome Screen Safely (Never fails even if audio is blocked)
         function openWeddingCard() {
             try {
                 var welcome = document.getElementById('welcome-screen');
                 var mainCard = document.getElementById('main-card');
                 var musicWrap = document.getElementById('music-control-wrap');
+                var editFab = document.getElementById('edit-fab');
 
                 if (mainCard) {
                     mainCard.style.display = 'block';
                 }
                 if (musicWrap) {
                     musicWrap.style.display = 'block';
+                }
+                if (editFab) {
+                    editFab.style.display = 'inline-flex';
                 }
                 if (welcome) {
                     welcome.classList.add('opened');
@@ -1523,19 +1698,33 @@
                 startMusic();
 
                 setTimeout(function () {
-                    if (welcome) {
-                        welcome.style.display = 'none';
-                    }
-                    window.scrollTo(0, 0);
+                    try {
+                        if (welcome) {
+                            welcome.style.display = 'none';
+                        }
+                        window.scrollTo(0, 0);
+                    } catch (innerErr) {}
                 }, 650);
-            } catch (e) {}
+            } catch (e) {
+                var fallbackWelcome = document.getElementById('welcome-screen');
+                var fallbackMain = document.getElementById('main-card');
+                if (fallbackWelcome) fallbackWelcome.style.display = 'none';
+                if (fallbackMain) fallbackMain.style.display = 'block';
+            }
         }
 
-        // Allow Enter key on Welcome screen
+        // Keyboard Enter or Space on Welcome screen
         document.addEventListener('keydown', function (e) {
             try {
                 var welcome = document.getElementById('welcome-screen');
-                if (e.key === 'Enter' && welcome && welcome.style.display !== 'none') {
+                var modal = document.getElementById('editor-modal');
+                if (modal && modal.style.display === 'flex') {
+                    if (e.key === 'Escape') closeEditorModal();
+                    return;
+                }
+                var isWelcomeVisible = welcome && welcome.style.display !== 'none' && !welcome.classList.contains('opened');
+                if (isWelcomeVisible && (e.key === 'Enter' || e.key === ' ')) {
+                    e.preventDefault();
                     openWeddingCard();
                 }
             } catch (err) {}
@@ -1558,11 +1747,17 @@
             try {
                 var now = Date.now();
                 var diff = weddingTimestamp - now;
+                var dEl = document.getElementById('cd-days');
+                var hEl = document.getElementById('cd-hours');
+                var mEl = document.getElementById('cd-minutes');
+                var sEl = document.getElementById('cd-seconds');
+                if (!dEl || !hEl || !mEl || !sEl) return;
+
                 if (diff <= 0) {
-                    document.getElementById('cd-days').textContent = '০০';
-                    document.getElementById('cd-hours').textContent = '০০';
-                    document.getElementById('cd-minutes').textContent = '০০';
-                    document.getElementById('cd-seconds').textContent = '০০';
+                    dEl.textContent = '০০';
+                    hEl.textContent = '০০';
+                    mEl.textContent = '০০';
+                    sEl.textContent = '০০';
                     return;
                 }
                 var days = Math.floor(diff / 86400000);
@@ -1570,16 +1765,16 @@
                 var mins = Math.floor((diff % 3600000) / 60000);
                 var secs = Math.floor((diff % 60000) / 1000);
 
-                document.getElementById('cd-days').textContent = toBnDigits(days);
-                document.getElementById('cd-hours').textContent = toBnDigits(hours);
-                document.getElementById('cd-minutes').textContent = toBnDigits(mins);
-                document.getElementById('cd-seconds').textContent = toBnDigits(secs);
+                dEl.textContent = toBnDigits(days);
+                hEl.textContent = toBnDigits(hours);
+                mEl.textContent = toBnDigits(mins);
+                sEl.textContent = toBnDigits(secs);
             } catch (e) {}
         }
         refreshCountdown();
         setInterval(refreshCountdown, 1000);
 
-        // 6A. Primary Direct Email Delivery via mailto (shahriar.h.sohag@gmail.com)
+        // 6A. Direct Email Delivery via mailto (shahriar.h.sohag@gmail.com)
         function handleWishSubmit(e) {
             e.preventDefault();
             try {
@@ -1587,11 +1782,11 @@
                 var wish = document.getElementById('guest-wish').value.trim();
                 if (!name || !wish) return;
 
-                var toEmail = 'shahriar.h.sohag@gmail.com';
+                var toEmail = cardData.email || 'shahriar.h.sohag@gmail.com';
                 var subject = encodeURIComponent('শুভ বিবাহের শুভেচ্ছা বার্তা - ' + name);
                 var body = encodeURIComponent(
                     'আসসালামু আলাইকুম,\n\n' +
-                    'দুই ঘর, এক উৎসব — হোসেন শাহরিয়ার (সোহাগ) ও উম্মে আয়মান নুসরাতের শুভ বিবাহ উপলক্ষে আন্তরিক শুভেচ্ছা ও দোয়া রইলো।\n\n' +
+                    'দুই ঘর, এক উৎসব — ' + cardData.groomName + ' ও ' + cardData.brideName + '-এর শুভ বিবাহ উপলক্ষে আন্তরিক শুভেচ্ছা ও দোয়া রইলো।\n\n' +
                     'শুভেচ্ছা বার্তা:\n"' + wish + '"\n\n' +
                     'শুভেচ্ছান্তে,\n' + name
                 );
@@ -1599,7 +1794,7 @@
                 var statusBox = document.getElementById('wish-sent-status');
                 if (statusBox) {
                     statusBox.style.display = 'block';
-                    statusBox.textContent = 'ধন্যবাদ ' + name + '! আপনার ইমেইল অ্যাপ খোলা হচ্ছে যেন বার্তাটি সরাসরি shahriar.h.sohag@gmail.com ঠিকানায় চলে যায়।';
+                    statusBox.textContent = 'ধন্যবাদ ' + name + '! আপনার ইমেইল অ্যাপ খোলা হচ্ছে যেন বার্তাটি সরাসরি ' + toEmail + ' ঠিকানায় চলে যায়।';
                 }
 
                 showToast('ইমেইল অ্যাপ খোলা হচ্ছে...');
@@ -1607,7 +1802,7 @@
             } catch (err) {}
         }
 
-        // 6B. Secondary Direct Web-to-Email Delivery (FormSubmit AJAX fallback for browsers without mail app)
+        // 6B. Secondary Direct Web-to-Email Delivery (AJAX fallback)
         function sendSilentWebEmail() {
             try {
                 var name = document.getElementById('guest-name').value.trim();
@@ -1617,13 +1812,14 @@
                     return;
                 }
 
+                var toEmail = cardData.email || 'shahriar.h.sohag@gmail.com';
                 var statusBox = document.getElementById('wish-sent-status');
                 if (statusBox) {
                     statusBox.style.display = 'block';
                     statusBox.textContent = 'আপনার শুভেচ্ছা বার্তা পাঠানো হচ্ছে...';
                 }
 
-                fetch('https://formsubmit.co/ajax/shahriar.h.sohag@gmail.com', {
+                fetch('https://formsubmit.co/ajax/' + encodeURIComponent(toEmail), {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -1638,15 +1834,99 @@
                 .then(function (res) { return res.json(); })
                 .then(function () {
                     if (statusBox) {
-                        statusBox.textContent = 'জাযাকাল্লাহু খাইরান, ' + name + '! আপনার শুভেচ্ছা বার্তাটি সফলভাবে shahriar.h.sohag@gmail.com-এ পাঠানো হয়েছে।';
+                        statusBox.textContent = 'জাযাকাল্লাহু খাইরান, ' + name + '! আপনার শুভেচ্ছা বার্তাটি সফলভাবে ' + toEmail + '-এ পাঠানো হয়েছে।';
                     }
                     showToast('শুভেচ্ছা বার্তা সফলভাবে পাঠানো হয়েছে!');
                     document.getElementById('wish-form').reset();
                 })
                 .catch(function () {
-                    copyText('নাম: ' + name + '\nশুভেচ্ছা: ' + wish, 'বার্তাটি কপি হয়েছে, shahriar.h.sohag@gmail.com-এ পাঠিয়ে দিন');
+                    copyText('নাম: ' + name + '\nশুভেচ্ছা: ' + wish, 'বার্তাটি কপি হয়েছে, ' + toEmail + '-এ পাঠিয়ে দিন');
                 });
             } catch (e) {}
+        }
+
+        // 7. Optional Details Editor Modal Functions
+        function applyCardDataToDOM() {
+            try {
+                document.getElementById('welcome-couple-full').textContent = cardData.groomName + ' ও ' + cardData.brideName;
+                document.getElementById('header-groom-name').textContent = cardData.groomName;
+                document.getElementById('header-bride-name').textContent = cardData.brideName;
+                document.getElementById('invite-couple-highlight').textContent = cardData.groomName;
+                document.getElementById('invite-bride-highlight').textContent = cardData.brideName;
+                document.getElementById('groom-card-name').textContent = cardData.groomName;
+                document.getElementById('bride-card-name').textContent = cardData.brideName;
+
+                document.getElementById('venue-name-display').textContent = cardData.venueName;
+                document.getElementById('venue-area-display').textContent = cardData.venueArea;
+                document.getElementById('venue-box-link').href = cardData.mapUrl;
+                document.getElementById('venue-map-btn').href = cardData.mapUrl;
+
+                document.getElementById('contact-num-1').textContent = cardData.phone1;
+                document.getElementById('contact-call-1').href = 'tel:' + cardData.phone1;
+                document.getElementById('contact-num-2').textContent = cardData.phone2;
+                document.getElementById('contact-call-2').href = 'tel:' + cardData.phone2;
+
+                document.getElementById('target-email-display').textContent = cardData.email;
+            } catch (e) {}
+        }
+
+        function openEditorModal() {
+            try {
+                document.getElementById('ed-groom').value = cardData.groomName;
+                document.getElementById('ed-bride').value = cardData.brideName;
+                document.getElementById('ed-venue').value = cardData.venueName;
+                document.getElementById('ed-map').value = cardData.mapUrl;
+                document.getElementById('ed-phone1').value = cardData.phone1;
+                document.getElementById('ed-phone2').value = cardData.phone2;
+                document.getElementById('ed-email').value = cardData.email;
+                document.getElementById('editor-modal').style.display = 'flex';
+            } catch (e) {}
+        }
+
+        function closeEditorModal() {
+            try {
+                document.getElementById('editor-modal').style.display = 'none';
+            } catch (e) {}
+        }
+
+        function saveEditorChanges() {
+            try {
+                var g = document.getElementById('ed-groom').value.trim();
+                var b = document.getElementById('ed-bride').value.trim();
+                var v = document.getElementById('ed-venue').value.trim();
+                var m = document.getElementById('ed-map').value.trim();
+                var p1 = document.getElementById('ed-phone1').value.trim();
+                var p2 = document.getElementById('ed-phone2').value.trim();
+                var em = document.getElementById('ed-email').value.trim();
+
+                if (g) cardData.groomName = g;
+                if (b) cardData.brideName = b;
+                if (v) cardData.venueName = v;
+                if (m && (m.indexOf('https://') === 0 || m.indexOf('http://') === 0)) {
+                    cardData.mapUrl = m;
+                }
+                if (p1) cardData.phone1 = p1;
+                if (p2) cardData.phone2 = p2;
+                if (em) cardData.email = em;
+
+                applyCardDataToDOM();
+                closeEditorModal();
+                showToast('তথ্য সফলভাবে আপডেট করা হয়েছে');
+            } catch (e) {}
+        }
+
+        function resetDefaultDetails() {
+            cardData.groomName = defaultCardData.groomName;
+            cardData.brideName = defaultCardData.brideName;
+            cardData.venueName = defaultCardData.venueName;
+            cardData.venueArea = defaultCardData.venueArea;
+            cardData.mapUrl = defaultCardData.mapUrl;
+            cardData.phone1 = defaultCardData.phone1;
+            cardData.phone2 = defaultCardData.phone2;
+            cardData.email = defaultCardData.email;
+            applyCardDataToDOM();
+            closeEditorModal();
+            showToast('মূল তথ্য পুনঃস্থাপন করা হয়েছে');
         }
     </script>
 </body>
